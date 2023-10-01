@@ -1,0 +1,28 @@
+.full-page-dark {
+  background-color: var(--black-dark-mode);
+}
+
+.text-dark,
+.paragraph-dark,
+.title-dark {
+  color: var(--white-dark-mode);
+}
+
+.link-dark,
+.button-dark {
+  color: var(--grey-dark-mode);
+}
+
+.link-dark:hover,
+.button-dark:hover {
+  color: var(--grey-dark-mode-hover);
+}
+
+.link-dark:active,
+.button-dark:active {
+  color: var(--grey-dark-mode-active);
+}
+
+.separator-dark {
+  background-color: var(--separator-dark-mode);
+}

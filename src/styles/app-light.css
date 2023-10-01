@@ -1,0 +1,28 @@
+.full-page-light {
+  background-color: var(--white-light-mode);
+}
+
+.text-light,
+.paragraph-light,
+.title-light {
+  color: var(--black-dark-mode);
+}
+
+.link-light,
+.button-light {
+  color: var(--grey-light-mode);
+}
+
+.link-light:hover,
+.button-light:hover {
+  color: var(--grey-light-mode-hover);
+}
+
+.link-light:active,
+.button-light:active {
+  color: var(--grey-light-mode-active);
+}
+
+.separator-light {
+  background-color: var(--separator-light-mode);
+}
