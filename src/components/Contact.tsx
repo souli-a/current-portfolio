@@ -2,7 +2,11 @@ import '../styles/app.css';
 import '../styles/app-light.css';
 import '../styles/app-dark.css';
 import usePreferencesStore from '../stores/preferencesStore';
-import { TitleClassName, LinkClassName, TextClassName } from '../types/types';
+import {
+  TitleClassName,
+  LinkClassName,
+  TextClassName,
+} from '../types/classNameThemeTypes';
 
 type ContactItem = {
   name: string;

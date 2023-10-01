@@ -3,7 +3,11 @@ import '../styles/app-light.css';
 import '../styles/app-dark.css';
 import Separator from './Separator';
 import usePreferencesStore from '../stores/preferencesStore';
-import { TitleClassName, TextClassName, LinkClassName } from '../types/types';
+import {
+  TitleClassName,
+  TextClassName,
+  LinkClassName,
+} from '../types/classNameThemeTypes';
 
 type Projects = {
   id: number;

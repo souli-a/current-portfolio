@@ -2,7 +2,10 @@ import '../styles/app.css';
 import '../styles/app-light.css';
 import '../styles/app-dark.css';
 import usePreferencesStore from '../stores/preferencesStore';
-import { TitleClassName, ParagraphClassName } from '../types/types';
+import {
+  TitleClassName,
+  ParagraphClassName,
+} from '../types/classNameThemeTypes';
 
 type Paragraph = {
   french: string;

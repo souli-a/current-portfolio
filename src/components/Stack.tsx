@@ -2,7 +2,7 @@ import '../styles/app.css';
 import '../styles/app-light.css';
 import '../styles/app-dark.css';
 import usePreferencesStore from '../stores/preferencesStore';
-import { TitleClassName, TextClassName } from '../types/types';
+import { TitleClassName, TextClassName } from '../types/classNameThemeTypes';
 
 type Stacks = {
   name: string;

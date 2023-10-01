@@ -1,7 +1,7 @@
 import Separator from './Separator';
 import useHeaderPreferences from '../hooks/useHeaderPreferences';
 import usePreferencesStore from '../stores/preferencesStore';
-import { TitleClassName, ButtonClassName } from '../types/types';
+import { TitleClassName, ButtonClassName } from '../types/classNameThemeTypes';
 
 const Header = () => {
   const { language, toggleLanguage } = useHeaderPreferences();

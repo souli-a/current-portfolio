@@ -1,5 +1,5 @@
 import usePreferencesStore from '../stores/preferencesStore';
-import { SeparatorClassName } from '../types/types';
+import { SeparatorClassName } from '../types/classNameThemeTypes';
 
 const Separator = () => {
   const { theme } = usePreferencesStore();
