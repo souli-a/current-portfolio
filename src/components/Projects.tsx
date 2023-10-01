@@ -32,7 +32,7 @@ const Projects = () => {
         language === 'french'
           ? `Un portfolio pour les développeurs fait avec React, Typescript, HTML, Sass et Vite.`
           : `A portfolio for developers made with React, Typescript, HTML, Sass and Vite.`,
-      repoURL: 'https://github.com/souli-a/portfolio',
+      repoURL: 'https://github.com/souli-a/portfolio-developer',
       liveURL: 'https://souli-a-template-1.vercel.app',
     },
     {
@@ -52,7 +52,7 @@ const Projects = () => {
         language === 'french'
           ? `Ce portfolio, fait avec React, Typescript, HTML, CSS et Vite.`
           : `This portfolio, made with React, Typescript, HTML, CSS and Vite.`,
-      repoURL: 'https://github.com/souli-a/current-portfolio',
+      repoURL: 'https://github.com/souli-a/portfolio-current',
       liveURL: 'https://soulimane.vercel.app',
     },
     {
@@ -60,10 +60,11 @@ const Projects = () => {
       symbol: '└',
       description:
         language === 'french'
-          ? `Français. Lorem ipsum dolor sit amet consectetur.`
-          : `English. Lorem ipsum dolor sit amet consectetur.`,
-      repoURL: 'https://github.com',
-      liveURL: 'https://vercel.com',
+          ? `Un environnement de bureau personnalisé sous Linux avec une configuration de Neovim pour le développement web.`
+          : `A customized Linux DE with a Neovim configuration for web development.`,
+      repoURL: 'https://github.com/souli-a/dotfiles',
+      liveURL:
+        'https://raw.githubusercontent.com/souli-a/dotfiles/main/preview.png',
     },
   ];
 
