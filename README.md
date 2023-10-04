@@ -1,4 +1,4 @@
-# Portfolio
+# portfolio-current
 
 This is my personal portfolio. Built with [`React`](https://react.dev), [`TypeScript`](https://www.typescriptlang.org), [`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML), [`CSS`](https://developer.mozilla.org/en-US/docs/Web/CSS) and [`Vite`](https://vitejs.dev).
 
