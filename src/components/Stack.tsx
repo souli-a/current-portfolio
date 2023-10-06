@@ -1,13 +1,8 @@
+import { usePreferencesStore } from '../stores/usePreferencesStore';
+import { TitleClassName, TextClassName } from '../types/classNameThemeTypes';
 import '../styles/app.css';
 import '../styles/app-light.css';
 import '../styles/app-dark.css';
-import usePreferencesStore from '../stores/preferencesStore';
-import { TitleClassName, TextClassName } from '../types/classNameThemeTypes';
-
-type Stacks = {
-  name: string;
-  symbol: string;
-};
 
 const Stack = () => {
   const { theme } = usePreferencesStore();
@@ -15,7 +10,7 @@ const Stack = () => {
   const titleClassName: TitleClassName = `title title-${theme}`;
   const textClassName: TextClassName = `text text-${theme}`;
 
-  const stacks: Stacks[] = [
+  const stacks = [
     {
       name: 'React',
       symbol: '┌',

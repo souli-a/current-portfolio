@@ -1,18 +1,12 @@
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
-import usePreferencesStore from '../stores/preferencesStore';
+import { usePreferencesStore } from '../stores/usePreferencesStore';
 import {
   TitleClassName,
   LinkClassName,
   TextClassName,
 } from '../types/classNameThemeTypes';
-
-type ContactItem = {
-  name: string;
-  link: string;
-  symbol: string;
-};
+import '../styles/app.css';
+import '../styles/app-light.css';
+import '../styles/app-dark.css';
 
 const Contact = () => {
   const { theme } = usePreferencesStore();
@@ -21,7 +15,7 @@ const Contact = () => {
   const linkClassName: LinkClassName = `link link-${theme}`;
   const textClassName: TextClassName = `text text-${theme}`;
 
-  const contacts: ContactItem[] = [
+  const contacts = [
     {
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/soulimane-abd/',

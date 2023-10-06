@@ -1,18 +1,13 @@
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
-import usePreferencesStore from '../stores/preferencesStore';
+import { usePreferencesStore } from '../stores/usePreferencesStore';
 import {
   TitleClassName,
   ParagraphClassName,
 } from '../types/classNameThemeTypes';
+import '../styles/app.css';
+import '../styles/app-light.css';
+import '../styles/app-dark.css';
 
-type Paragraph = {
-  french: string;
-  english: string;
-};
-
-const paragraph: Paragraph = {
+const paragraph = {
   french: `J'ai suivi plusieurs cursus dans l'enseignement supérieur sans jamais
 être pleinement convaincu. En plein semestre, je tombe sur une vidéo
 d'un tutoriel en JavaScript. Je la regarde. J'essaie de coder la même

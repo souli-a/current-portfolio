@@ -12,6 +12,7 @@ body {
 
 body,
 #root,
+.full-page,
 .container {
   display: flex;
   flex-direction: column;
@@ -93,7 +94,7 @@ body,
 .stack,
 .projects,
 .about {
-  gap: var(--gap-high);
+  gap: var(--gap-mid);
 }
 
 .stack-elements,

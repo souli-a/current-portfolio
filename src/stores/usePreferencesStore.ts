@@ -1,19 +1,20 @@
 import { create } from 'zustand';
+import { Theme, Language } from '../types/preferencesTypes';
 
 type PreferencesStore = {
-  theme: 'light' | 'dark';
-  language: 'french' | 'english';
+  theme: Theme;
+  language: Language;
 
   setTheme: (theme: 'light' | 'dark') => void;
-  setLanguage: (language: 'french' | 'english') => void;
+  setLanguage: (language: 'english' | 'french') => void;
 };
 
 const usePreferencesStore = create<PreferencesStore>((set) => ({
-  theme: 'light',
-  language: 'french',
+  theme: '',
+  language: '',
 
   setTheme: (theme) => set({ theme }),
   setLanguage: (language) => set({ language }),
 }));
 
-export default usePreferencesStore;
+export { usePreferencesStore, type Theme, type Language };

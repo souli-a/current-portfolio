@@ -1,21 +1,13 @@
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
 import Separator from './Separator';
-import usePreferencesStore from '../stores/preferencesStore';
+import { usePreferencesStore } from '../stores/usePreferencesStore';
 import {
   TitleClassName,
   TextClassName,
   LinkClassName,
 } from '../types/classNameThemeTypes';
-
-type Projects = {
-  id: number;
-  symbol: string;
-  description: string;
-  repoURL: string;
-  liveURL: string;
-};
+import '../styles/app.css';
+import '../styles/app-light.css';
+import '../styles/app-dark.css';
 
 const Projects = () => {
   const { theme, language } = usePreferencesStore();
@@ -24,7 +16,7 @@ const Projects = () => {
   const textClassName: TextClassName = `text text-${theme}`;
   const linkClassName: LinkClassName = `link link-${theme}`;
 
-  const projects: Projects[] = [
+  const projects = [
     {
       id: 1,
       symbol: '┌',
@@ -33,7 +25,7 @@ const Projects = () => {
           ? `Un portfolio pour les développeurs fait avec React, Typescript, HTML, Sass et Vite.`
           : `A portfolio for developers made with React, Typescript, HTML, Sass and Vite.`,
       repoURL: 'https://github.com/souli-a/portfolio-developer',
-      liveURL: 'https://souli-a-template-1.vercel.app',
+      liveURL: 'https://souli-a-portfolio-developer.vercel.app',
     },
     {
       id: 2,
@@ -43,7 +35,7 @@ const Projects = () => {
           ? `Un portfolio pour les photographes fait avec Typescript, HTML, CSS, GSAP et Vite.`
           : `A portfolio for photographers made with Typescript, HTML, CSS, GSAP and Vite.`,
       repoURL: 'https://github.com/souli-a/portfolio-photographer',
-      liveURL: 'https://souli-a-template-2.vercel.app',
+      liveURL: 'https://souli-a-portfolio-photographer.vercel.app',
     },
     {
       id: 3,
@@ -57,6 +49,16 @@ const Projects = () => {
     },
     {
       id: 4,
+      symbol: '├',
+      description:
+        language === 'french'
+          ? `Un site pour obtenir l'heure et la date d'une ville avec le format d'une langue en particulier. Fait avec React, TypeScript, HTML, CSS et Vite.`
+          : `A website to get the time and date of a city with the format of a particular language. Built with React, TypeScript, HTML, CSS and Vite.`,
+      repoURL: 'https://github.com/souli-a/city-time-app',
+      liveURL: 'https://souli-a-city-time-app.vercel.app',
+    },
+    {
+      id: 5,
       symbol: '└',
       description:
         language === 'french'

@@ -1,26 +1,27 @@
 import Separator from './Separator';
-import useHeaderPreferences from '../hooks/useHeaderPreferences';
-import usePreferencesStore from '../stores/preferencesStore';
+import { usePreferencesStore } from '../stores/usePreferencesStore';
 import { TitleClassName, ButtonClassName } from '../types/classNameThemeTypes';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const Header = () => {
-  const { language, toggleLanguage } = useHeaderPreferences();
+  const { language, theme, setLanguage, setTheme } = usePreferencesStore();
 
-  const { theme, setTheme } = usePreferencesStore();
+  useLocalStorage({
+    setter: setLanguage,
+    localStorageItemName: 'language',
+    state: language,
+  });
 
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+  useLocalStorage({
+    setter: setTheme,
+    localStorageItemName: 'theme',
+    state: theme,
+  });
 
   const titleClassName: TitleClassName = `title title-${theme}`;
   const buttonClassName: ButtonClassName = `button button-${theme}`;
 
-  const languageButtonLanguage =
-    language === 'french'
-      ? 'English'
-      : language === 'english'
-      ? 'Français'
-      : null;
+  const languageButtonLanguage = language === 'french' ? 'English' : 'Français';
 
   const languageButtonTheme =
     theme === 'light' && language === 'french'
@@ -32,6 +33,14 @@ const Header = () => {
       : theme === 'dark' && language === 'english'
       ? 'Light'
       : null;
+
+  const toggleTheme = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  };
+
+  const toggleLanguage = () => {
+    language === 'french' ? setLanguage('english') : setLanguage('french');
+  };
 
   return (
     <header className="header">

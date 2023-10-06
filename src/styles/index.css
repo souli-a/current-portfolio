@@ -5,30 +5,22 @@
   --white-light-mode: #f3f3f3;
   --white-dark-mode: #cdcdcd;
 
-  --black-light-mode: #191919;
   --black-dark-mode: #111111;
-
-  --selection-background-color: ;
-  --selection-color: ;
-
-  --before-color: ;
 
   --grey-light-mode: #939393;
   --grey-light-mode-hover: #b8b8b8;
   --grey-light-mode-active: #dbdbdb;
 
   --grey-dark-mode: #787878;
-  --grey-dark-mode-hover: #525252;
   --grey-dark-mode-active: #393939;
 
-  --paragraph-line-height: 3.5rem;
-  --paragraph-line-height-break-800: 2.85rem;
+  --paragraph-line-height: 3rem;
+  --paragraph-line-height-break-800: 2.5rem;
 
   --full-page-padding: 1rem;
 
   --gap-low: 1rem;
   --gap-mid: 1.5rem;
-  --gap-high: 2rem;
 
   --gap-break-800: 3rem;
   --project-gap-break-800: 2rem;
