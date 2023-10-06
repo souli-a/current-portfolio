@@ -23,7 +23,7 @@ const Projects = () => {
       description:
         language === 'french'
           ? `Un portfolio pour les développeurs fait avec React, Typescript, HTML, Sass et Vite.`
-          : `A portfolio for developers made with React, Typescript, HTML, Sass and Vite.`,
+          : `A portfolio for developers built with React, Typescript, HTML, Sass and Vite.`,
       repoURL: 'https://github.com/souli-a/portfolio-developer',
       liveURL: 'https://souli-a-portfolio-developer.vercel.app',
     },
@@ -33,7 +33,7 @@ const Projects = () => {
       description:
         language === 'french'
           ? `Un portfolio pour les photographes fait avec Typescript, HTML, CSS, GSAP et Vite.`
-          : `A portfolio for photographers made with Typescript, HTML, CSS, GSAP and Vite.`,
+          : `A portfolio for photographers built with Typescript, HTML, CSS, GSAP and Vite.`,
       repoURL: 'https://github.com/souli-a/portfolio-photographer',
       liveURL: 'https://souli-a-portfolio-photographer.vercel.app',
     },
@@ -43,7 +43,7 @@ const Projects = () => {
       description:
         language === 'french'
           ? `Ce portfolio, fait avec React, Typescript, HTML, CSS et Vite.`
-          : `This portfolio, made with React, Typescript, HTML, CSS and Vite.`,
+          : `This portfolio, built with React, Typescript, HTML, CSS and Vite.`,
       repoURL: 'https://github.com/souli-a/portfolio-current',
       liveURL: 'https://soulimane.vercel.app',
     },
