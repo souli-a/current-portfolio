@@ -1,0 +1,39 @@
+.text {
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+}
+
+.paragraph {
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  line-height: var(--paragraph-line-height);
+}
+
+.title {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+}
+
+.link,
+.button {
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .text,
+  .paragraph,
+  .link,
+  .button {
+    font-size: var(--text-size-break-800);
+  }
+
+  .paragraph {
+    line-height: var(--paragraph-line-height-break-800);
+  }
+
+  .title {
+    font-size: var(--title-size-break-800);
+  }
+}

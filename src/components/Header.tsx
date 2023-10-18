@@ -2,6 +2,7 @@ import Separator from './Separator';
 import { usePreferencesStore } from '../stores/usePreferencesStore';
 import { TitleClassName, ButtonClassName } from '../types/classNameThemeTypes';
 import useLocalStorage from '../hooks/useLocalStorage';
+import '../styles/components/header.css';
 
 const Header = () => {
   const { language, theme, setLanguage, setTheme } = usePreferencesStore();

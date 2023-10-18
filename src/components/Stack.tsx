@@ -1,8 +1,6 @@
 import { usePreferencesStore } from '../stores/usePreferencesStore';
 import { TitleClassName, TextClassName } from '../types/classNameThemeTypes';
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
+import '../styles/components/stack.css';
 
 const Stack = () => {
   const { theme } = usePreferencesStore();
@@ -35,7 +33,7 @@ const Stack = () => {
 
   return (
     <section className="stack">
-      <h1 className={titleClassName}>0.3</h1>
+      <h1 className={titleClassName}>─── 0.3 ───</h1>
       <div className="stack-elements">
         {stacks.map((stack, index) => (
           <div key={index}>

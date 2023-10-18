@@ -1,0 +1,21 @@
+.full-page {
+  display: flex;
+  flex-grow: 1;
+  gap: 2rem;
+  padding: var(--full-page-padding);
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 80rem;
+}
+
+@media (max-width: 800px) {
+  .container {
+    gap: var(--gap-break-800);
+  }
+}

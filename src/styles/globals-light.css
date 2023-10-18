@@ -2,6 +2,14 @@
   background-color: var(--white-light-mode);
 }
 
+.full-page-light *::before {
+  color: var(--black-dark-mode);
+}
+
+.full-page-light svg {
+  fill: var(--black-dark-mode);
+}
+
 .text-light,
 .paragraph-light,
 .title-light {

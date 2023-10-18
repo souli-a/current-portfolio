@@ -5,9 +5,7 @@ import {
   TextClassName,
   LinkClassName,
 } from '../types/classNameThemeTypes';
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
+import '../styles/components/projects.css';
 
 const Projects = () => {
   const { theme, language } = usePreferencesStore();
@@ -62,17 +60,16 @@ const Projects = () => {
       symbol: '└',
       description:
         language === 'french'
-          ? `Un environnement de bureau personnalisé sous Linux avec une configuration de Neovim pour le développement web.`
-          : `A customized Linux DE with a Neovim configuration for web development.`,
-      repoURL: 'https://github.com/souli-a/dotfiles',
-      liveURL:
-        'https://raw.githubusercontent.com/souli-a/dotfiles/main/preview.png',
+          ? `Une application de gestion des tâches faite avec React, TypeScript, Redux, HTML, Sass et Vite.`
+          : `A task management application built with React, TypeScript, Redux, HTML, Sass and Vite.`,
+      repoURL: 'https://github.com/souli-a/todo-app',
+      liveURL: 'https://souli-a-todo-app.vercel.app',
     },
   ];
 
   return (
     <section className="projects">
-      <h1 className={titleClassName}>0.2</h1>
+      <h1 className={titleClassName}>─── 0.2 ───</h1>
       <div className="projects-elements">
         {projects.map((project) => (
           <div key={project.id} className={`project project-${project.id}`}>

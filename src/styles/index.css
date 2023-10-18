@@ -1,3 +1,8 @@
+@import url('./fonts.css');
+@import url('./globals.css');
+@import url('./globals-light.css');
+@import url('./globals-dark.css');
+
 :root {
   --separator-light-mode: #737373;
   --separator-dark-mode: #969696;
@@ -12,15 +17,16 @@
   --grey-light-mode-active: #dbdbdb;
 
   --grey-dark-mode: #787878;
+  --grey-dark-mode-hover: #4a4a4a;
   --grey-dark-mode-active: #393939;
 
   --paragraph-line-height: 3rem;
   --paragraph-line-height-break-800: 2.5rem;
 
-  --full-page-padding: 1rem;
+  --full-page-padding: 0.5rem;
 
   --gap-low: 1rem;
-  --gap-mid: 1.5rem;
+  --gap-mid: 1rem;
 
   --gap-break-800: 3rem;
   --project-gap-break-800: 2rem;
@@ -34,14 +40,6 @@
   --text-weight: 400;
 }
 
-* {
-  margin: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 *,
 *::before,
 *::after {
@@ -50,8 +48,27 @@ html {
   -moz-box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
+  display: flex;
+  flex-grow: 1;
+  font-family: 'JetBrains Mono';
   -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-grow: 1;
 }
 
 h1,
@@ -66,7 +83,8 @@ p {
 
 button,
 a,
-hr {
+hr,
+span {
   all: unset;
   font: inherit;
 }

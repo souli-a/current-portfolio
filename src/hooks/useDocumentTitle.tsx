@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import { Language } from '../types/preferencesTypes';
 
-interface UseThemeWithHtmlProps {
+interface UseDocumentTitleProps {
   language: Language;
   englishTitle: string;
   frenchTitle: string;
 }
 
-const useThemeWithHtml = ({
+const useDocumentTitle = ({
   language,
   frenchTitle,
   englishTitle,
-}: UseThemeWithHtmlProps) => {
+}: UseDocumentTitleProps) => {
   useEffect(() => {
     document.title = language === 'english' ? englishTitle : frenchTitle;
   }, [language]);
@@ -19,4 +19,4 @@ const useThemeWithHtml = ({
   return null;
 };
 
-export default useThemeWithHtml;
+export default useDocumentTitle;

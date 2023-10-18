@@ -2,14 +2,13 @@ import Noise from '../components/Noise';
 import Header from '../components/Header';
 import About from '../components/About';
 import Projects from '../components/Projects';
+import OtherProjects from '../components/OtherProjects';
 import Stack from '../components/Stack';
 import Contact from '../components/Contact';
 import { usePreferencesStore } from '../stores/usePreferencesStore';
 import { FullPageClassName } from '../types/classNameThemeTypes';
-import useThemeWithHtml from '../hooks/useDocumentTitle';
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import '../styles/pages/portfolio.css';
 
 const Portfolio = () => {
   const { theme, language } = usePreferencesStore();
@@ -19,7 +18,7 @@ const Portfolio = () => {
       ? 'full-page full-page-light'
       : 'full-page full-page-dark';
 
-  useThemeWithHtml({
+  useDocumentTitle({
     language: language,
     frenchTitle: 'Soulimane - Développeur',
     englishTitle: 'Soulimane - Developer',
@@ -33,6 +32,7 @@ const Portfolio = () => {
           <Header />
           <About />
           <Projects />
+          <OtherProjects />
           <Stack />
           <Contact />
         </div>

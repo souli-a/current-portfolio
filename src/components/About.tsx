@@ -3,9 +3,7 @@ import {
   TitleClassName,
   ParagraphClassName,
 } from '../types/classNameThemeTypes';
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
+import '../styles/components/about.css';
 
 const paragraph = {
   french: `J'ai suivi plusieurs cursus dans l'enseignement supérieur sans jamais
@@ -36,7 +34,7 @@ const About = () => {
 
   return (
     <section className="about">
-      <h1 className={titleClassName}>0.1</h1>
+      <h1 className={titleClassName}>─── 0.1 ───</h1>
       <p className={paragraphClassName}>{correctParagraphLanguage}</p>
     </section>
   );

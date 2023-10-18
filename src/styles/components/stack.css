@@ -1,0 +1,13 @@
+.stack-elements,
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack {
+  gap: var(--gap-mid);
+}
+
+.stack-elements {
+  gap: var(--gap-low);
+}

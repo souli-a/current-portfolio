@@ -1,5 +1,6 @@
 import { usePreferencesStore } from '../stores/usePreferencesStore';
 import { SeparatorClassName } from '../types/classNameThemeTypes';
+import '../styles/components/separator.css';
 
 const Separator = () => {
   const { theme } = usePreferencesStore();

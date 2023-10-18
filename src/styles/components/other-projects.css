@@ -1,0 +1,15 @@
+.projects-expandable-section {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.projects-expandable-section svg {
+  display: none;
+  margin-top: 0.1rem;
+}
+
+.projects-expandable-section:hover svg {
+  display: block;
+  margin-top: 0.1rem;
+}

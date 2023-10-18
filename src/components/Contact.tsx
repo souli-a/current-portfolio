@@ -4,9 +4,7 @@ import {
   LinkClassName,
   TextClassName,
 } from '../types/classNameThemeTypes';
-import '../styles/app.css';
-import '../styles/app-light.css';
-import '../styles/app-dark.css';
+import '../styles/components/contact.css';
 
 const Contact = () => {
   const { theme } = usePreferencesStore();
@@ -35,7 +33,7 @@ const Contact = () => {
 
   return (
     <section className="contact">
-      <h1 className={titleClassName}>0.4</h1>
+      <h1 className={titleClassName}>─── 0.4 ───</h1>
       <div className="contact-elements">
         {contacts.map((contact, index) => (
           <div key={index}>
