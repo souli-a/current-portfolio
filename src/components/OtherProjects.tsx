@@ -68,7 +68,7 @@ const OtherProjects = () => {
         onClick={() => setContentActive(!contentActive)}
         className="projects-expandable-section"
       >
-        <h1 className={titleClassName}>── 0.2.1 ──</h1>
+        <h1 className={titleClassName}>·─ 0.2.1</h1>
         <span>{contentActive ? arrowUpIcon : arrowDownIcon}</span>
       </div>
       {contentActive && (

@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <section className="contact">
-      <h1 className={titleClassName}>─── 0.4 ───</h1>
+      <h1 className={titleClassName}>·─ 0.4</h1>
       <div className="contact-elements">
         {contacts.map((contact, index) => (
           <div key={index}>

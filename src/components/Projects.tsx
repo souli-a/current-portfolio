@@ -69,7 +69,7 @@ const Projects = () => {
 
   return (
     <section className="projects">
-      <h1 className={titleClassName}>─── 0.2 ───</h1>
+      <h1 className={titleClassName}>·─ 0.2</h1>
       <div className="projects-elements">
         {projects.map((project) => (
           <div key={project.id} className={`project project-${project.id}`}>

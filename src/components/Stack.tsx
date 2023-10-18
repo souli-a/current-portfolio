@@ -33,7 +33,7 @@ const Stack = () => {
 
   return (
     <section className="stack">
-      <h1 className={titleClassName}>─── 0.3 ───</h1>
+      <h1 className={titleClassName}>·─ 0.3</h1>
       <div className="stack-elements">
         {stacks.map((stack, index) => (
           <div key={index}>

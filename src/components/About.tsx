@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <section className="about">
-      <h1 className={titleClassName}>─── 0.1 ───</h1>
+      <h1 className={titleClassName}>·─ 0.1</h1>
       <p className={paragraphClassName}>{correctParagraphLanguage}</p>
     </section>
   );
