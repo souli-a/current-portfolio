@@ -18,17 +18,17 @@
 
 .link-dark,
 .button-dark {
-  color: var(--grey-dark-mode);
+  color: var(--green-dark-mode);
 }
 
 .link-dark:hover,
 .button-dark:hover {
-  color: var(--grey-dark-mode-hover);
+  color: var(--green-dark-mode-hover);
 }
 
 .link-dark:active,
 .button-dark:active {
-  color: var(--grey-dark-mode-active);
+  color: var(--green-dark-mode-active);
 }
 
 .separator-dark {

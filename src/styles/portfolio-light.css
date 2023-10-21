@@ -18,17 +18,17 @@
 
 .link-light,
 .button-light {
-  color: var(--grey-light-mode);
+  color: var(--green-light-mode);
 }
 
 .link-light:hover,
 .button-light:hover {
-  color: var(--grey-light-mode-hover);
+  color: var(--green-light-mode-hover);
 }
 
 .link-light:active,
 .button-light:active {
-  color: var(--grey-light-mode-active);
+  color: var(--green-light-mode-active);
 }
 
 .separator-light {

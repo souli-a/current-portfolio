@@ -1,44 +1,8 @@
 @import url('./fonts.css');
 @import url('./globals.css');
-@import url('./globals-light.css');
-@import url('./globals-dark.css');
-
-:root {
-  --separator-light-mode: #737373;
-  --separator-dark-mode: #969696;
-
-  --white-light-mode: #f3f3f3;
-  --white-dark-mode: #cdcdcd;
-
-  --black-dark-mode: #111111;
-
-  --grey-light-mode: #939393;
-  --grey-light-mode-hover: #b8b8b8;
-  --grey-light-mode-active: #dbdbdb;
-
-  --grey-dark-mode: #787878;
-  --grey-dark-mode-hover: #4a4a4a;
-  --grey-dark-mode-active: #393939;
-
-  --paragraph-line-height: 3rem;
-  --paragraph-line-height-break-800: 2.5rem;
-
-  --full-page-padding: 0.5rem;
-
-  --gap-low: 1rem;
-  --gap-mid: 1rem;
-
-  --gap-break-800: 3rem;
-  --project-gap-break-800: 2rem;
-
-  --title-size: 2rem;
-  --title-size-break-800: 1.8rem;
-  --title-weight: 700;
-
-  --text-size: 1.6rem;
-  --text-size-break-800: 1.4rem;
-  --text-weight: 400;
-}
+@import url('./portfolio-light.css');
+@import url('./portfolio-dark.css');
+@import url('./portfolio.css');
 
 *,
 *::before,
@@ -87,4 +51,9 @@ hr,
 span {
   all: unset;
   font: inherit;
+}
+
+::selection {
+  background-color: var(--green-dark-mode);
+  color: var(--black-dark-mode);
 }
