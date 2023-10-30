@@ -1,52 +1,46 @@
 import { usePreferencesStore } from '../stores/usePreferencesStore';
-import {
-  TitleClassName,
-  LinkClassName,
-  TextClassName,
-} from '../types/classNameThemeTypes';
-import '../styles/components/contact.css';
+import '../styles/contact.css';
+
+const links = [
+  {
+    id: 1,
+    title: 'LinkedIn',
+    url: 'https://linkedin.com/in/soulimane-abd',
+  },
+  {
+    id: 2,
+    title: 'Mail',
+    url: 'mailto:soulimane.a@protonmail.com',
+  },
+  {
+    id: 3,
+    title: 'GitHub',
+    url: 'https://github.com/souli-a',
+  },
+];
 
 const Contact = () => {
   const { theme } = usePreferencesStore();
 
-  const titleClassName: TitleClassName = `title title-${theme}`;
-  const linkClassName: LinkClassName = `link link-${theme}`;
-  const textClassName: TextClassName = `text text-${theme}`;
-
-  const contacts = [
-    {
-      name: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/soulimane-abd/',
-      symbol: '┌',
-    },
-    {
-      name: 'Mail',
-      link: 'mailto:soulimane.a@protonmail.com',
-      symbol: '├',
-    },
-    {
-      name: 'GitHub',
-      link: 'https://github.com/souli-a',
-      symbol: '└',
-    },
-  ];
+  const linksClassName =
+    theme === 'light' ? 'links links-light' : 'links links-dark';
 
   return (
     <section className="contact">
-      <h1 className={titleClassName}>·─ 0.4</h1>
-      <div className="contact-elements">
-        {contacts.map((contact, index) => (
-          <div key={index}>
-            <span className={textClassName}>{contact.symbol} </span>
-            <a
-              href={contact.link}
-              target="_blank"
-              rel="noreferrer noopener"
-              className={linkClassName}
-            >
-              {contact.name}
-            </a>
-          </div>
+      <div className="title-section">
+        <div className="available-logo" />
+        <h1 className="title">DISPONIBLE</h1>
+      </div>
+      <div className={linksClassName}>
+        {links.map((link) => (
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            key={link.id}
+            href={link.url}
+          >
+            {link.title}
+          </a>
         ))}
       </div>
     </section>

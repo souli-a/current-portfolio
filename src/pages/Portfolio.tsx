@@ -1,43 +1,49 @@
-import Noise from '../components/Noise';
-import Header from '../components/Header';
-import About from '../components/About';
+import { useEffect, useState } from 'react';
 import Projects from '../components/Projects';
-import OtherProjects from '../components/OtherProjects';
 import Stack from '../components/Stack';
+import About from '../components/About';
 import Contact from '../components/Contact';
+import Switch from '../components/Switch';
 import { usePreferencesStore } from '../stores/usePreferencesStore';
-import { FullPageClassName } from '../types/classNameThemeTypes';
-import useDocumentTitle from '../hooks/useDocumentTitle';
-import '../styles/pages/portfolio.css';
+import '../styles/portfolio.css';
 
 const Portfolio = () => {
-  const { theme, language } = usePreferencesStore();
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const { theme } = usePreferencesStore();
 
-  const fullPageClassName: FullPageClassName =
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+  }, []);
+
+  const portfolioContainerClassName =
     theme === 'light'
-      ? 'full-page full-page-light'
-      : 'full-page full-page-dark';
-
-  useDocumentTitle({
-    language: language,
-    frenchTitle: 'Soulimane - Développeur',
-    englishTitle: 'Soulimane - Developer',
-  });
+      ? 'portfolio-container portfolio-container-light'
+      : 'portfolio-container portfolio-container-dark';
 
   return (
-    <>
-      <Noise />
-      <div className={fullPageClassName}>
-        <div className="container">
-          <Header />
-          <About />
-          <Projects />
-          <OtherProjects />
+    <main className={portfolioContainerClassName}>
+      <Projects />
+      <Switch />
+      {windowWidth > 600 ? (
+        <>
+          <div className="section-stack-about">
+            <Stack />
+            <About />
+          </div>
+          <Contact />
+        </>
+      ) : (
+        <div className="section-stack-about">
           <Stack />
+          <About />
           <Contact />
         </div>
-      </div>
-    </>
+      )}
+    </main>
   );
 };
 

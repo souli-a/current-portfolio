@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('/fonts/jetbrains-mono/jet-brains-mono-variable.woff2')
-    format('woff2');
+  font-family: 'Clash Display';
+  src: url('/fonts/clash-display/clash-display-variable.woff2') format('woff2'),
+    url('/fonts/clash-display/clash-display-variable.woff') format('woff');
 }

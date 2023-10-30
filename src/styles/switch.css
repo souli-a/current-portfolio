@@ -1,0 +1,21 @@
+.switch {
+  position: absolute;
+  top: -11rem;
+  cursor: pointer;
+}
+
+.switch-light {
+  left: 19.3rem;
+}
+
+.switch-dark {
+  left: 20rem;
+}
+
+.switch-light path:not(:first-child) {
+  stroke: var(--color-black);
+}
+
+.switch-dark path {
+  stroke: var(--color-white);
+}

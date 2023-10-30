@@ -1,8 +1,5 @@
 @import url('./fonts.css');
 @import url('./globals.css');
-@import url('./portfolio-light.css');
-@import url('./portfolio-dark.css');
-@import url('./portfolio.css');
 
 *,
 *::before,
@@ -10,9 +7,6 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-}
-
-* {
   margin: 0;
 }
 
@@ -26,7 +20,7 @@ html {
 body {
   display: flex;
   flex-grow: 1;
-  font-family: 'JetBrains Mono';
+  font-family: 'Clash Display';
   -webkit-font-smoothing: antialiased;
 }
 
@@ -45,15 +39,7 @@ p {
   word-wrap: break-word;
 }
 
-button,
 a,
-hr,
-span {
+button {
   all: unset;
-  font: inherit;
-}
-
-::selection {
-  background-color: var(--green-dark-mode);
-  color: var(--black-dark-mode);
 }

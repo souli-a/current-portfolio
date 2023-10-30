@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { Language, Theme } from '../types/preferencesTypes';
+import { Theme } from '../stores/usePreferencesStore';
 
 interface UseLocalStorageProps {
   setter: (state: any) => void;
-  localStorageItemName: 'language' | 'theme';
-  state: Language | Theme;
+  localStorageItemName: 'theme';
+  state: Theme;
 }
 
 const useLocalStorage = ({
@@ -15,17 +15,12 @@ const useLocalStorage = ({
   useEffect(() => {
     const localStorageValue = localStorage.getItem(
       `${localStorageItemName}`
-    ) as Language | Theme;
+    ) as Theme;
 
     const browserTheme = window.matchMedia('(prefers-color-scheme: light)')
       .matches
       ? 'light'
       : 'dark';
-
-    const browserLanguage =
-      navigator.language === 'fr' || navigator.language === 'fr-FR'
-        ? 'french'
-        : 'english';
 
     if (state && state !== localStorageValue) {
       localStorage.setItem(`${localStorageItemName}`, state);
@@ -38,11 +33,6 @@ const useLocalStorage = ({
     if (localStorageItemName === 'theme' && !localStorageValue && !state) {
       setter(browserTheme);
       localStorage.setItem(`${localStorageItemName}`, browserTheme);
-    }
-
-    if (localStorageItemName === 'language' && !localStorageValue && !state) {
-      setter(browserLanguage);
-      localStorage.setItem(`${localStorageItemName}`, browserLanguage);
     }
   }, [state]);
 

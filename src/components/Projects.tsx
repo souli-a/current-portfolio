@@ -1,100 +1,62 @@
-import Separator from './Separator';
 import { usePreferencesStore } from '../stores/usePreferencesStore';
-import {
-  TitleClassName,
-  TextClassName,
-  LinkClassName,
-} from '../types/classNameThemeTypes';
-import '../styles/components/projects.css';
+import '../styles/projects.css';
+
+const projects = [
+  {
+    id: 1,
+    title: 'Application : gestion des tâches',
+    stack: 'React · TypeScript · JavaScript · HTML · CSS',
+    url: 'https://souli-a-todo-app.vercel.app',
+  },
+  {
+    id: 2,
+    title: 'Portfolio : photographe',
+    stack: 'TypeScript · JavaScript · HTML · CSS · GSAP',
+    url: 'https://souli-a-portfolio-photographer.vercel.app',
+  },
+  {
+    id: 3,
+    title: `Application : heure et date d'une ville`,
+    stack: 'React · TypeScript · JavaScript · HTML · CSS',
+    url: 'https://souli-a-city-time-app.vercel.app',
+  },
+  {
+    id: 4,
+    title: `Application : gestion des tâches (back-end shutdown)`,
+    stack: 'React · JavaScript · HTML · CSS',
+    url: 'https://app-listify.vercel.app',
+  },
+  {
+    id: 5,
+    title: `D’autres projets disponible sur mon GitHub`,
+    stack: '',
+    url: 'https://github.com/souli-a',
+  },
+];
 
 const Projects = () => {
-  const { theme, language } = usePreferencesStore();
+  const { theme } = usePreferencesStore();
 
-  const titleClassName: TitleClassName = `title title-${theme}`;
-  const textClassName: TextClassName = `text text-${theme}`;
-  const linkClassName: LinkClassName = `link link-${theme}`;
-
-  const projects = [
-    {
-      id: 1,
-      symbol: '┌',
-      description:
-        language === 'french'
-          ? `Un portfolio pour les développeurs fait avec React, Typescript, HTML, Sass et Vite.`
-          : `A portfolio for developers built with React, Typescript, HTML, Sass and Vite.`,
-      repoURL: 'https://github.com/souli-a/portfolio-developer',
-      liveURL: 'https://souli-a-portfolio-developer.vercel.app',
-    },
-    {
-      id: 2,
-      symbol: '├',
-      description:
-        language === 'french'
-          ? `Un portfolio pour les photographes fait avec Typescript, HTML, CSS, GSAP et Vite.`
-          : `A portfolio for photographers built with Typescript, HTML, CSS, GSAP and Vite.`,
-      repoURL: 'https://github.com/souli-a/portfolio-photographer',
-      liveURL: 'https://souli-a-portfolio-photographer.vercel.app',
-    },
-    {
-      id: 3,
-      symbol: '├',
-      description:
-        language === 'french'
-          ? `Ce portfolio, fait avec React, Typescript, HTML, CSS et Vite.`
-          : `This portfolio, built with React, Typescript, HTML, CSS and Vite.`,
-      repoURL: 'https://github.com/souli-a/portfolio-current',
-      liveURL: 'https://soulimane.vercel.app',
-    },
-    {
-      id: 4,
-      symbol: '├',
-      description:
-        language === 'french'
-          ? `Un site pour obtenir l'heure et la date d'une ville avec le format d'une langue en particulier. Fait avec React, TypeScript, HTML, CSS et Vite.`
-          : `A website to get the time and date of a city with the format of a particular language. Built with React, TypeScript, HTML, CSS and Vite.`,
-      repoURL: 'https://github.com/souli-a/city-time-app',
-      liveURL: 'https://souli-a-city-time-app.vercel.app',
-    },
-    {
-      id: 5,
-      symbol: '└',
-      description:
-        language === 'french'
-          ? `Une application de gestion des tâches faite avec React, TypeScript, Redux, HTML, Sass et Vite.`
-          : `A task management application built with React, TypeScript, Redux, HTML, Sass and Vite.`,
-      repoURL: 'https://github.com/souli-a/todo-app',
-      liveURL: 'https://souli-a-todo-app.vercel.app',
-    },
-  ];
+  const projectLinkClassName =
+    theme === 'light'
+      ? 'project-link project-link-light'
+      : 'project-link project-link-dark';
 
   return (
     <section className="projects">
-      <h1 className={titleClassName}>·─ 0.2</h1>
-      <div className="projects-elements">
+      <h1 className="title">PROJETS</h1>
+      <div className="all-projects">
         {projects.map((project) => (
-          <div key={project.id} className={`project project-${project.id}`}>
-            <div className="project-informations">
-              <span className={textClassName}>{project.symbol}</span>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href={project.liveURL}
-                className={linkClassName}
-              >
-                Live
-              </a>
-              <Separator />
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href={project.repoURL}
-                className={linkClassName}
-              >
-                Repo
-              </a>
-              <Separator />
-            </div>
-            <p className={textClassName}>{project.description}</p>
+          <div key={project.id} className="project">
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              className={projectLinkClassName}
+              href={project.url}
+            >
+              {project.title}
+            </a>
+            <span className="project-stack">{project.stack}</span>
           </div>
         ))}
       </div>

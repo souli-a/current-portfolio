@@ -1,0 +1,17 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-title-content);
+}
+
+.title {
+  font-size: var(--font-size-0);
+  font-weight: 550;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-elements);
+  font-size: var(--font-size-1);
+}

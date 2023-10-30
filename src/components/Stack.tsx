@@ -1,49 +1,18 @@
-import { usePreferencesStore } from '../stores/usePreferencesStore';
-import { TitleClassName, TextClassName } from '../types/classNameThemeTypes';
-import '../styles/components/stack.css';
+import '../styles/stack.css';
 
-const Stack = () => {
-  const { theme } = usePreferencesStore();
+const stack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS'];
 
-  const titleClassName: TitleClassName = `title title-${theme}`;
-  const textClassName: TextClassName = `text text-${theme}`;
-
-  const stacks = [
-    {
-      name: 'React',
-      symbol: '┌',
-    },
-    {
-      name: 'TypeScript',
-      symbol: '├',
-    },
-    {
-      name: 'JavaScript',
-      symbol: '├',
-    },
-    {
-      name: 'HTML',
-      symbol: '├',
-    },
-    {
-      name: 'CSS',
-      symbol: '└',
-    },
-  ];
-
+const Projects = () => {
   return (
     <section className="stack">
-      <h1 className={titleClassName}>·─ 0.3</h1>
-      <div className="stack-elements">
-        {stacks.map((stack, index) => (
-          <div key={index}>
-            <span className={textClassName}>{stack.symbol}&nbsp;</span>
-            <span className={textClassName}>{stack.name}</span>
-          </div>
+      <h1 className="title">STACK</h1>
+      <div className="stacks">
+        {stack.map((techno, index) => (
+          <span key={index}>{techno}</span>
         ))}
       </div>
     </section>
   );
 };
 
-export default Stack;
+export default Projects;
