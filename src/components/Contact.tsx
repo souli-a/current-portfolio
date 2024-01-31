@@ -10,7 +10,7 @@ const links = [
   {
     id: 2,
     title: 'Mail',
-    url: 'mailto:soulimane.a@protonmail.com',
+    url: 'mailto:soulimane.abdesslam@gmail.com',
   },
   {
     id: 3,
